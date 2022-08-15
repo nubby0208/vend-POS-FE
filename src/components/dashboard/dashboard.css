@@ -1,0 +1,26 @@
+.homeChartHeader {
+     margin-bottom: 20px;
+     padding-left: 15px;
+}
+
+.apexcharts-toolbar {
+     right: 16px !important;
+}
+.spaceBetween {
+     display: flex !important;
+     justify-content: space-between;
+}
+.totalDiscount {
+     height: 165px;
+     display: grid;
+    align-content: space-between;
+}
+.totalDiscount p {
+     font-size: 12px;
+     margin-bottom: 0;
+}
+@media screen and (max-width: 850px) {
+     .homeChartHeader {
+             display: block !important;
+     }
+}

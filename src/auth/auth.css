@@ -1,0 +1,68 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap);
+
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--vd-colour--background);
+    color: var(--vd-colour--text);
+    font-family: lato,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    font-size: 15px;
+    font-synthesis: none;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.form-group {
+     padding: 10px 0;
+}
+.main-content-container {
+    box-sizing: border-box;
+    display: flex;
+    height: calc(100% - 50px);
+    width: 100%;
+}
+
+.vd-signin-background {
+     background-color: var(--vd-colour--background);
+     background-position: 50%;
+     background-repeat: no-repeat;
+     background-size: cover;
+     bottom: 0;
+     position: fixed;
+     right: 0;
+     top: 0;
+}
+.signForm {
+     border: 2px solid #c3c3c3;
+     border-radius: 5px;
+     padding: 30px;
+     background: white;
+     margin: 100px 60px;
+     font-family: "Inter", sans-serif;
+}
+.form {
+     width: 50%;
+}
+.vd-signin-background {
+     width : 50%;
+}
+.notStore {
+     text-align: end;
+}
+.loginButton {
+     display: flex;
+     justify-content: space-between;
+}
+@media screen and (max-width: 1200px) {
+     .vd-signin-background {
+             display: none;
+     }
+     .form {
+             width: 100%;
+             margin: 0 auto;
+             max-width: 600px;
+
+     }
+}

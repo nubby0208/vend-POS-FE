@@ -1,0 +1,117 @@
+.SaleTagetHeader {
+     align-items: baseline;
+     padding-bottom: 100px;
+}
+
+.SR400Name {
+     font-size: 25px;
+}
+
+.divider {
+     width: 100%;
+     /* padding-bottom: 3px; */
+     background-color: rgb(206, 206, 206);
+     border-radius: 10px;
+     margin-top: 20px;
+}
+
+.thingsToKnow {
+     border-top: 1px solid rgb(132 132 132);
+     margin-bottom: 20px;
+}
+.thingsToKnow div:first-child {
+     display: flex;
+}
+.thingsToKnow div:first-child h5 {
+     padding-left: 20px;
+     color: rgb(46 156 46);
+     padding-top: 3px;
+}
+.homeContent {
+     padding: 1.5rem;
+}
+.ThingsBody {
+     display: flex;
+}
+.viewCount {
+     margin-left: 20px;
+     border-radius: 20px;
+     height: 200px;
+}
+.spaceBetween {
+     display: flex; 
+     justify-content: space-between;
+}
+.thingsToKnow div:nth-child(2) {
+     padding-right: 20px;
+}
+.thingsToKnow a {
+     text-decoration: none;
+}
+.viewCount a {
+     text-decoration: none;
+}
+.blogCardTitle {
+     border-bottom: 2px solid gray;
+     margin-bottom: 20px;
+}
+.blogCardDescription {
+     font-size: 13px;
+}
+.tablist {
+     display: flex;
+}
+.tablist img {
+     width: 45px;
+     height: 45px;
+     border-radius: 5px;
+}
+.tablist p {
+     font-size: 14px;
+     margin: 0;
+}
+.tablist div {
+     display: grid;
+     align-content: space-around;
+     margin-left: 10px;
+}
+.tablistindex {
+     display: grid;
+     align-content: space-evenly;
+}
+.css-19kzrtu {
+     padding: 0px !important;
+}
+.productList {
+     padding: 10px 10px 0 10px;
+}
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+     text-transform: none !important;
+}
+.RetailMetricsCheckBox p {
+     font-size: 12px;
+     margin-left: 24px;
+}
+.css-140puxv-MuiTypography-root-MuiDialogTitle-root p {
+     font-size: 13px;
+     margin: 0;
+}
+.siteSubtitle h5 {
+     margin-top: 50px;
+     /* font-weight: 900; */
+}
+.siteSubtitle p {
+     font-size: 14px;
+}
+
+@media screen and (max-width: 850px) {
+     .ThingsBody {
+          display: block !important;
+     }
+     .ThingsBody div:first-child {
+          width: 100%;
+     }
+     .ThingsBody div:nth-child(2) {
+          margin-left: 0;
+     }
+}

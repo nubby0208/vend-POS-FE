@@ -1,0 +1,128 @@
+body {
+        background-color: #f4f2f5;
+        /* color: #0a1c2ebf; */
+        font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.navbar {
+        position: fixed !important;
+        left: 0;
+        right: 0;
+        z-index: 100;
+}
+.custom-py-4 {
+        padding: 1.5rem;
+}
+.sidebarToggle {
+        border: 1px solid red;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        position: absolute;
+        left: 193px;
+        top: 7px;
+}
+
+.toggleColor {
+        color: red;
+}
+
+.selectTab {
+        background: white;
+}
+
+.sidebarArea  {
+        z-index: 1;
+        background: #e7e5e8;
+        display: flex;
+}
+
+.sidebarArea .sidenav-bg .active {
+        background-color: white;
+        color: #3f32f5;
+}
+
+.sidenav-bg {
+        width: 85px;
+}
+
+.nav-link {
+        display: grid;
+        text-align: center;
+        padding-right: 0;
+        padding-left: 0;
+}
+
+.sidebarNav a span {
+        font-size: 12px;
+        font-weight: 700;
+        font-family: lato,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+
+}
+
+.toggleButton {
+        color: white;
+        padding: 0;
+}
+
+.toggleButton svg {
+        font-size: 28px;
+}
+.sideNavTab a {
+        text-align: center;
+}
+.sidebarlist {
+        text-align: start;
+        padding-left: 15px;
+}
+.sideNavTab a span svg {
+        font-size: 28px;
+}
+.sidebarlist span {
+        font-size: 14px !important;
+}
+
+
+
+/* When click sell sidebar change background and color */
+.pageWrapper.blackbackground  {
+        background-color: #141217 !important;
+}
+.blackbackground .sidebarArea  div:nth-child(2) {
+        background-color: #1e1c21 !important;
+}
+.blackbackground {
+        color: white !important;
+}
+.blackbackground .sidebarArea {
+        background-color: #27252a !important;
+}
+.blackbackground .sidebarNav .sidenav-bg .text-secondary {
+        color: white !important;
+}
+.blackbackground .sidebarArea .sidenav-bg:hover {
+        background: rgb(0, 23, 229, 0.1) !important;
+}
+.blackbackground .sidebarArea .sideNavTab:hover {
+        background: #141217 !important;
+}
+.blackbackground .sidebarArea .sidenav-bg .active {
+        background: rgb(0, 23, 229, 0.1) !important;
+}
+.blackbackground .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+        color: white !important;
+}
+.blackbackground h2 {
+        color: white !important;
+}
+/* end */
+   
+
+@media screen and (max-width: 992px) {
+        .sidebarArea  {
+                z-index: 11;
+        }
+}

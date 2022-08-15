@@ -1,0 +1,255 @@
+.sell-second-card {
+     min-height: 650px;
+     padding: 50px;
+     background-color: #1e1c21;
+}
+.sell-first-body {
+     padding: 30px;
+}
+.sell-first-body-search {
+     margin-bottom: 100px;
+}
+.sell-first-body-search p {
+     margin: 3px;
+}
+.sell-first-quickKey {
+     min-height: 300px;
+     display: flex;
+     justify-content: center;
+}
+.sell-first-keys div {
+     display: grid;
+     align-content: space-evenly;
+     background: #1e1c21;
+     border-radius: 6px 6px 3px 3px;
+     justify-content: space-around;
+     width: 110px;
+     height: 90px;
+     margin: 5px;
+}
+.sell-first-keys div:nth-child(1) {
+     border-top: 7px solid #e6b03d;
+}
+.sell-first-keys div:nth-child(2) {
+     border-top: 7px solid #7125d1;
+}
+.sell-first-keys div:nth-child(3) {
+     border-top: 7px solid #ed6b44;
+}
+.sell-first-keys div:nth-child(4) {
+     border-top: 7px solid #de3cec;
+}
+.sell-first-keys div p {
+     margin: 0;
+     font-size: 13px;
+}
+.sell-first-keys {
+     display: flex;
+     justify-content: center;
+     margin-top: 60px;
+}
+.quickKeys {
+     width: 75%;
+     background-image: url('https://vendfrontendassets.freetls.fastly.net/images/sell/qk-bg-dark-v1.svg');
+     background-position: 50%;
+     background-size: 150%;
+}
+.quickKeys span {
+     text-align: center;
+}
+.quickKeys span p {
+     padding: 0 20px;
+     margin-top: 30px;
+     color: #5b83ac;
+}
+.quickKeys span h2 {
+     font-weight: 900;
+     margin-top: 12px;
+}
+.sell-first-button {
+     display: flex;
+     justify-content: center;
+}
+.sell-second-card h3 {
+     margin: 15px 0;
+}
+.sell-second-card div:nth-child(1) {
+     text-align: center;
+}
+.sell-second-card p {
+     font-size: 12.6px;
+}
+.sell-second-register div {
+     margin: 10px 0;
+}
+.MuiInputAdornment-root p {
+     color: white !important;
+     margin-right: 10px;
+     font-size: 20px;
+}
+.MuiOutlinedInput-root input, textarea {
+     color: white !important;
+}
+.sell-second-card button {
+     width: 100%;
+}
+.OpenClose h2 {
+     margin: 30px 30px 30px 50px;
+}
+.OpenCloseHeader {
+     display: flex;
+     height: 87px;
+     background: #27252a;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 50px;
+}
+.OpenCloseHeader p {
+     margin: 0;
+}
+.SalesHistory {
+     background-color: #1e1c21;
+     padding: 35px 45px;
+}
+.OpenCloseBody {
+     background-color: #1e1c21;
+     display: flex;
+     justify-content: center;
+}
+.OpenCloseBody-child {
+     width: 40%;
+     padding: 15px;
+}
+.sell-second-register button {
+     width: 100%;
+}
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+     color: #3f32f5 !important;
+}
+
+.SalesHistory fieldset legend {
+     display: none !important;
+}
+.SaleHistory-moreInfo {
+     display: flex;
+     margin-bottom: 20px;
+}
+.SaleHistory-moreInfo div {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: end;
+}
+.SaleHistory-moreInfo button {
+     height: 61px;
+     width: 50%;
+     background-color: #477bff;
+}
+.SaleHistory-moreInfo a {
+     margin: 0 14px 20px;
+}
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+     border-color: rgb(39 37 42) !important;
+     border-width: revert !important;
+}
+.css-9npbnl-MuiFormLabel-root-MuiInputLabel-root {
+     color: white !important;
+     font-weight: 600;
+     margin-bottom: 10px;
+}
+.SalesHistory .MuiSelect-icon, .MuiSelect-select {
+     color: white !important;
+}
+.SalesHistory .MuiInputAdornment-positionStart svg {
+     color: #477bff;
+}
+.SalesHistory ::placeholder {
+     color: #5a82e7 !important;
+}
+.tabControl {
+     margin-bottom: 20px;
+}
+.hidden {
+     display: none !important;
+}
+.show {
+     display: block;
+}
+.CashManagementHeader {
+     text-align: center;
+}
+.CashManagementHeader p {
+     font-size: 13.9px;
+}
+.statusHeader {
+     padding: 30px;
+}
+.customButton {
+     background-color: #eb4f29 !important;
+     color: white !important;
+     /* text-transform: none !important */
+}
+.customButton:hover {
+     background-color: #d4301d !important;
+}
+.customButton:focus {
+     background-color: #d4301d !important;
+}
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+     background: #1e1c21 !important;
+     color: white !important;
+}
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper ul {
+     list-style-type: circle;
+}
+.divider {
+     border: 1px solid #535353;
+     margin: 18px 0;
+}
+.SellSettings {
+     padding: 60px;
+}
+.Settings-blog-1 {
+     margin-bottom: 20px;
+}
+.Settings-blog-child {
+     display: flex;
+     width: 100%;
+}
+.Settings-blog-child div:nth-child(1) {
+     width: 30%;
+}
+.Settings-blog-child div:nth-child(2) {
+     width: 70%;
+}
+.Settings-blog-child h6 {
+    line-height: 25px;
+    padding-right: 55px;
+}
+.Settings-blog-child button {
+     background-color: #477bff;
+}
+.switchStyle {
+     display: flex;
+     width: 100% !important;
+}
+.switchStyle p {
+     font-size: 12px;
+}
+@media screen and (max-width: 850px) {
+     .sell-first-quickKey {
+          display: none;
+     }
+     .sell-first-body-search {
+          margin: 0;
+     }
+     .sell-first-body {
+          padding: 15px;
+     }
+     .OpenCloseHeader {
+          display: block;
+     }
+     .OpenCloseHeader p {
+          padding: 7px 0;
+     }
+}
