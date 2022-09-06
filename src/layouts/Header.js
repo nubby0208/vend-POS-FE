@@ -36,12 +36,15 @@ const Header = () => {
         <div className="d-lg-block d-none me-5 pe-3">
           <Logo />
         </div>
-        <NavbarBrand href="/">
+        {/* <NavbarBrand href="/">
           <LogoWhite className=" d-lg-none" />
-        </NavbarBrand>
-        <Button color="none" className=" d-lg-none toggleButton" onClick={() => showMobilemenu()} >
+        </NavbarBrand> */}
+        <div className=" d-lg-none toggleButton" onClick={() => showMobilemenu()} >
+        <Button color="none">
           <i className="bi bi-list"></i>
         </Button>
+        <div>Menu</div>
+        </div>
       </div>
 
       <div>

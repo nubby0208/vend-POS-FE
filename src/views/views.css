@@ -39,7 +39,7 @@
      height: 200px;
 }
 .spaceBetween {
-     display: flex; 
+     display: flex;
      justify-content: space-between;
 }
 .thingsToKnow div:nth-child(2) {

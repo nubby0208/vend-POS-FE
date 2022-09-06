@@ -9,6 +9,14 @@ import "../online/online.css"
 import Switch from "react-switch";
 import axios from 'axios'
 
+import { styled } from '@mui/material/styles';
+import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
+import MuiAccordion from '@mui/material/Accordion';
+import MuiAccordionSummary from '@mui/material/AccordionSummary';
+import MuiAccordionDetails from '@mui/material/AccordionDetails';
+import { Box, Tabs, Tab } from '@mui/material';
+
+
 const brand = []
 const productType = []
 const Supplier = []
@@ -17,6 +25,52 @@ const statusList = [
      { value: 'active', label: 'Active' },
      { value: 'inactive', label: 'Inactive' },
 ]
+
+
+
+const Accordion = styled((props) => (
+     <MuiAccordion disableGutters elevation={0} square {...props} />
+))(({ theme }) => ({
+     // border: `1px solid ${theme.palette.divider}`,
+     '&:not(:last-child)': {
+          borderBottom: 0,
+     },
+     '&:before': {
+          display: 'none',
+     },
+}));
+
+const AccordionSummary = styled((props) => (
+     <MuiAccordionSummary
+          expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
+          {...props}
+     />
+))(({ theme }) => ({
+     backgroundColor:
+          theme.palette.mode === 'dark'
+               ? 'rgba(255, 255, 255, .05)'
+               : 'rgba(0, 0, 0, .03)',
+     flexDirection: 'row-reverse',
+     '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
+          transform: 'rotate(90deg)',
+     },
+     '& .MuiAccordionSummary-content': {
+          marginLeft: theme.spacing(1),
+     },
+}));
+
+const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+     padding: theme.spacing(2),
+     borderTop: '1px solid rgba(0, 0, 0, .125)',
+}));
+
+function a11yProps(index) {
+     return {
+          id: `simple-tab-${index}`,
+          'aria-controls': `simple-tabpanel-${index}`,
+     };
+}
+
 const Products = () => {
      const navigate = useNavigate();
      const [productList, setProductList] = useState([])
@@ -81,8 +135,28 @@ const Products = () => {
                })
      }, [])
 
+
+     const [expanded, setExpanded] = React.useState('panel1');
+
+
+
+     const handleChange = (panel) => (event, newExpanded) => {
+          setExpanded(newExpanded ? panel : false);
+     };
+
+
+     const [selected, setSelected] = useState(0);
+
+     const handleTabChange = (event, newValue) => {
+          setSelected(newValue);
+     };
      return (
+
+
+
+
           <>
+
                <div className='online-header'>
                     <h2>Products</h2>
                </div>
@@ -95,7 +169,7 @@ const Products = () => {
                          <Button onClick={() => navigate('/catalog/products/add')} >Add Products</Button>
                     </div>
                </div>
-               <div className='componentPadding flex'>
+               {/* <div className='componentPadding flex'>
                     <div className='half-body flex product-catalog-card'>
                          <div className='seven-body'>
                               <img src="//vendfrontendassets.freetls.fastly.net/images/setup/set-up-product-tour-v1.svg" />
@@ -125,7 +199,7 @@ const Products = () => {
                               </div>
                          </div>
                     </div>
-               </div>
+               </div> */}
 
                <div className='product-search fullWidth flex componentPadding'>
                     <div className='half-body'>
@@ -193,6 +267,8 @@ const Products = () => {
                          <div className='width-10'>Created</div>
                     </div>
                     {productList.map((item, index) => {
+
+
                          var product_img = productImages.find(array => array.product_id === item.id)
                          var sku_code = JSON.parse(item.sku_code)
                          var supplier = JSON.parse(item.supplier)
@@ -201,25 +277,40 @@ const Products = () => {
 
                          return (
                               <div className='product-list' key={index}>
-                                   <div className='width-5'><Checkbox /></div>
-                                   <div className='width-20 product-image-show'>
-                                        <img src={product_img ? API_URL + product_img.url : '//vendfrontendassets.freetls.fastly.net/images/products/placeholder.svg'} className='productImage' />
-                                        <div>
-                                             <p className='margin-zero'>{item.name}</p>
-                                             <p className='description margin-zero'>{sku_code[0].code}</p>
-                                        </div>
-                                   </div>
-                                   <div className='width-10'>
-                                        {item.brand}
-                                   </div>
-                                   <div className='width-15'>{supplier.length == 1 ? supplier[0].type.label : supplier[0].type.label + " and " + supplier.length - 1 + " more"}</div>
-                                   <div className='width-12'>∞</div>
-                                   <div className='width-13'>{retail_price && '$' + retail_price.toFixed(2)}</div>
-                                   <div className='width-10'>
-                                        <Switch onChange={(e) => productActive(e)} checked={item.isActive == 1 ? true : false} onColor='#3f32f5' />
-                                   </div>
-                                   <div className='width-10'>{item.create_at.split('T')[0]}</div>
+                                   <Accordion expanded={expanded === `panel${index}`} onChange={handleChange(`panel${index}`)}>
+                                        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+                                             <div className='width-5'><Checkbox /></div>
+                                             <div className='width-20 product-image-show'>
+                                                  <img src={product_img ? API_URL + product_img.url : '//vendfrontendassets.freetls.fastly.net/images/products/placeholder.svg'} className='productImage' />
+                                                  <div>
+                                                       <p className='margin-zero'>{item.name}</p>
+                                                       <p className='description margin-zero'>{sku_code[0].code}</p>
+                                                  </div>
+                                             </div>
+                                             <div className='width-10'>
+                                                  {item.brand}
+                                             </div>
+                                             <div className='width-15'>{supplier.length == 1 ? supplier[0].type.label : supplier[0].type.label + " and " + supplier.length - 1 + " more"}</div>
+                                             <div className='width-12'>∞</div>
+                                             <div className='width-13'>{retail_price && '$' + retail_price.toFixed(2)}</div>
+                                             <div className='width-10'>
+                                                  <Switch onChange={(e) => productActive(e)} checked={item.isActive == 1 ? true : false} onColor='#3f32f5' />
+                                             </div>
+                                             <div className='width-10'>{item.create_at.split('T')[0]}</div>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                                                  <Tabs value={selected} onChange={handleTabChange} TabIndicatorProps={{ style: { background: '#3f32f5', color: 'green' } }}>
+                                                       <Tab label="Current & Upcomimg" {...a11yProps(0)} />
+                                                       <Tab label="Past" {...a11yProps(1)} />
+                                                       <Tab label="All" {...a11yProps(2)} />
+                                                  </Tabs>
+                                             </Box>
+                                        </AccordionDetails>
+                                   </Accordion>
+                                   
                               </div>
+
                          )
                     })}
 
